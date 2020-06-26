@@ -2,11 +2,11 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-  - route: pal-mregan.apps.evans.pal.pivotal.io/allocations
+  - route: allocations-pal-mregan.apps.evans.pal.pivotal.io
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://pal-mregan.apps.evans.pal.pivotal.io/registration
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-mregan.apps.evans.pal.pivotal.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
